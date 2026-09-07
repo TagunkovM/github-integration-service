@@ -35,10 +35,10 @@ jobs:
         run: dotnet build GitHubIntegration.sln --configuration Release --no-restore
 
       - name: Unit tests
-        run: dotnet test tests/GitHubIntegration.UnitTests --configuration Release --no-build --verbosity normal
+        run: dotnet test --project tests/GitHubIntegration.UnitTests/GitHubIntegration.UnitTests.csproj --configuration Release --no-build --verbosity normal
 
       - name: Integration tests
-        run: dotnet test tests/GitHubIntegration.IntegrationTests --configuration Release --no-build --verbosity normal
+        run: dotnet test --project tests/GitHubIntegration.IntegrationTests/GitHubIntegration.IntegrationTests.csproj --configuration Release --no-build --verbosity normal
 
   docker-build:
     name: Docker build
