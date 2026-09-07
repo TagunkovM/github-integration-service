@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore GitHubIntegration.sln
+
+      - name: Build
+        run: dotnet build GitHubIntegration.sln --configuration Release --no-restore
+
+      - name: Unit tests
+        run: dotnet test tests/GitHubIntegration.UnitTests --configuration Release --no-build --verbosity normal
+
+      - name: Integration tests
+        run: dotnet test tests/GitHubIntegration.IntegrationTests --configuration Release --no-build --verbosity normal
+
+  docker-build:
+    name: Docker build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Build image
+        run: docker build --tag github-integration-service:ci .

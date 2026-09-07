@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.0.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIntegration.Domain", "src\GitHubIntegration.Domain\GitHubIntegration.Domain.csproj", "{A1A8C0B3-1428-4C86-956D-5DDB72FD2C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIntegration.Application", "src\GitHubIntegration.Application\GitHubIntegration.Application.csproj", "{A7B7C328-573B-4B28-A9C5-6E69F8032498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIntegration.Infrastructure", "src\GitHubIntegration.Infrastructure\GitHubIntegration.Infrastructure.csproj", "{1776D13B-40BC-43A7-9A37-7375EFF29C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIntegration.Api", "src\GitHubIntegration.Api\GitHubIntegration.Api.csproj", "{9F0A065C-BDA4-432B-BC41-139536C4A41D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIntegration.UnitTests", "tests\GitHubIntegration.UnitTests\GitHubIntegration.UnitTests.csproj", "{CC09E78B-D827-4DF6-8FA8-A6E7D47D8A0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIntegration.IntegrationTests", "tests\GitHubIntegration.IntegrationTests\GitHubIntegration.IntegrationTests.csproj", "{CA63B5BE-0568-4610-A1BB-A77451010597}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1A8C0B3-1428-4C86-956D-5DDB72FD2C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A8C0B3-1428-4C86-956D-5DDB72FD2C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A8C0B3-1428-4C86-956D-5DDB72FD2C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A8C0B3-1428-4C86-956D-5DDB72FD2C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B7C328-573B-4B28-A9C5-6E69F8032498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B7C328-573B-4B28-A9C5-6E69F8032498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B7C328-573B-4B28-A9C5-6E69F8032498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B7C328-573B-4B28-A9C5-6E69F8032498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1776D13B-40BC-43A7-9A37-7375EFF29C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1776D13B-40BC-43A7-9A37-7375EFF29C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1776D13B-40BC-43A7-9A37-7375EFF29C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1776D13B-40BC-43A7-9A37-7375EFF29C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0A065C-BDA4-432B-BC41-139536C4A41D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0A065C-BDA4-432B-BC41-139536C4A41D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0A065C-BDA4-432B-BC41-139536C4A41D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0A065C-BDA4-432B-BC41-139536C4A41D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC09E78B-D827-4DF6-8FA8-A6E7D47D8A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC09E78B-D827-4DF6-8FA8-A6E7D47D8A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC09E78B-D827-4DF6-8FA8-A6E7D47D8A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC09E78B-D827-4DF6-8FA8-A6E7D47D8A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA63B5BE-0568-4610-A1BB-A77451010597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA63B5BE-0568-4610-A1BB-A77451010597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA63B5BE-0568-4610-A1BB-A77451010597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA63B5BE-0568-4610-A1BB-A77451010597}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

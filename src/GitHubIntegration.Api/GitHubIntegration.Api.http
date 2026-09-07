@@ -1,0 +1,35 @@
+@host = http://localhost:8080
+
+### Health
+GET {{host}}/health
+
+### Track repository and start initial synchronization
+POST {{host}}/api/repositories
+Content-Type: application/json
+
+{
+  "owner": "dotnet",
+  "name": "runtime"
+}
+
+### Tracked repositories
+GET {{host}}/api/repositories
+
+### Repository
+GET {{host}}/api/repositories/dotnet/runtime
+
+### Issues
+GET {{host}}/api/repositories/dotnet/runtime/issues?state=open&page=1&pageSize=20
+
+### Pull requests
+GET {{host}}/api/repositories/dotnet/runtime/pull-requests?state=open&page=1&pageSize=20
+
+### Commits
+GET {{host}}/api/repositories/dotnet/runtime/commits?branch=main&page=1&pageSize=20
+
+### Manual synchronization
+POST {{host}}/api/repositories/dotnet/runtime/sync
+
+### Replace with syncId returned by POST /api/repositories or POST /sync
+@syncId = 00000000-0000-0000-0000-000000000000
+GET {{host}}/api/sync/{{syncId}}

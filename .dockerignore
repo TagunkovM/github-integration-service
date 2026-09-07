@@ -1,0 +1,11 @@
+.git
+.github
+.vs
+.idea
+.vscode
+**/bin
+**/obj
+TestResults
+coverage
+.env
+*.zip
